@@ -16,11 +16,8 @@ if "model" not in st.session_state:
 def app():
     st.subheader('RNN-LSTM Based Typhoon Prediction in the Philippines')
     
-    text = """Prof. Louie F. Cervantes, M. Eng. (Information Engineering)
-    \nCCS 229 - Intelligent Systems
-    *Department of Computer Science
-    *College of Information and Communications Technology
-    *##West Visayas State University##"""
+    text = """Rochelle Anne Dinaque     BSCS 3B
+CCS 229 - Intelligent Systems"""
     st.text(text)
 
     text = """This Streamlit app utilizes a bi-directional Recurrent Neural Network 
@@ -48,7 +45,7 @@ def app():
 
     # Plot the data
     fig, ax = plt.subplots()
-    ax.plot(df['Typhoons']) 
+    ax.plot(df.iloc[:, 1]) 
     ax.set_xlabel("Time")
     ax.set_ylabel("No. of Typhoons")
     ax.set_title("Time Series Plot of Typhoons")
